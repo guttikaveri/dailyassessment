@@ -1,0 +1,216 @@
+ <!-- task1 -->
+<!-- what is javascript? -->
+javascript  is object oriented programming language which  is used by several websites for 
+scripting the webpage.
+It  is the world's  most popular  programming language and widely used client-side
+scripting lanmguage.
+It is initially created  to make web pages alive
+It is crested by brenden eich
+ Javascript is single threaded synchronous language .
+<!-- Difference b/w javascript and other languages -->
+  Difference between javascript and other language is javascript executed in runtime and rest other prog.
+ language executes in compile time .
+  <!-- primary use cases -->
+  It allows developers to implement complex features on the webpages,
+such interactive forms, animations, realtime updates 
+------------------------------------------------------------------------------------------------------------------------------
+<!-- task2 -->
+<!-- what are data types in javascript? -->
+datatypes  has two types of data types:
+1. primitive datatype and
+2. non-primitive datatype
+Primitive Data types:
+// 1.Number 2. String 3. Undefined 4. Boolean 5. Null 6. BigInt 7. Symbol
+
+<!-- 1.number: -->
+ var num= 20;
+ console.log(num)
+
+ <!-- 2.String: -->
+  var name ="kaveri"
+  console.log(name)
+  <!-- 3.null -->
+   var  null = null ;
+console.log(null)
+
+<!-- 4.undefined -->
+ var undef ;
+ console.log (undef)
+
+ <!-- 5. Boolean -->
+ var isBoolean = true;
+console.log(isBoolean)
+<!-- 6.BigInt  -->
+let bigNumber = BigInt(12345678901234567890098765432109876543211234567809876543);
+ console.log(bigNumber);
+
+<!-- 7.Symbol -->
+ let capital = Symbol("Hyderabad");
+ let capital1 = Symbol("Hyderabad");
+ console.log(capital === capital1);
+
+
+<!-- // Non-primitive Datatypes: -->
+// 1. Array
+let randomArray = ["kaveri", 100, true];
+
+//2. Object
+
+let obj = new object(); => obj const
+
+let obj = object.create(null); =>obj. create method
+
+let obj = function (){
+};
+--------------------------------------------------------------------------------------------------------------------------
+ <!-- task3 -->
+  <!-- what is dom? -->
+  Document Object Model : This is a tree like representation of the nodes of document(HTML file)
+  // The Document Object Model (DOM) is a programming interface for web documents. 
+  // It represents the page so that programs can change the document structure, style, and content. 
+  // The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
+
+  explain how javascript interacts  with DOM to manipualate webpages:-
+   to manipulate dom we need to accsess in  5 ways of accessing the elements
+  // 1. getElementsbyTagname
+  // 2. getElementbyID
+  // 3. getElementsbyClassName
+  // 4. querySelector
+  // 5. querySelectorAll
+
+
+  -------------------------------------------------------------------------------------------------------------------------
+  <!-- task4 -->
+   <!-- explain difference between null and undefined -->
+
+   null- means a variable  has beendeclareda and we assigned value as null.
+   undefined-  means  a variable  has been declared and  we have not assigned value.
+
+ex:null-                   ex: undefined-
+let example = null;         let example;
+------------------------------------------------------------------------------------------------------------------------
+
+<!-- task5 -->
+<!-- what is the difference between let,const, and var -->
+
+  <!-- Var: can be redeclared and reintialized.  -->
+   var x = 10;
+   console.log(x)
+     
+   <!--var  functionscope -->
+   function myFuntion(){
+    var name = "kaveri"
+   }
+   console.log(myFunction)
+
+ Let can be reinitialized and cannot be redeclared, let is block or local scope variable
+function Hello(){
+  if(true){
+    let name="kaveri"
+    console.log(name)
+  }
+}
+ Const  cannot be reinitialized and nor it can redeclared, const is block scope,
+ const should declared and initialized on the same line.
+ function Hello(){
+  if(true){
+    const name="kaveri"
+    console.log(name)
+  }
+}
+ 
+------------------------------------------------------------------------------------------------------------------------
+
+  <!-- task6 -->
+    <!-- what is hoisting -->
+   Hoisting  where  it is declared with var keyword, all the variables move to the top of the program
+    and it will give  cannot initialize before initialization with cost and let.
+      <!-- using var -->
+    console.log(hoisting);
+    var hoisting = "javascript";
+     <!-- using let -->
+      console.log(hoisting)
+    let hoisting = "javascript"
+
+    <!-- using const -->
+     console.log(hoisting);
+      const hoisting ="javascript";
+    
+------------------------------------------------------------------------------------------------------------------------
+<!-- task7 -->
+ <!-- what is the difference between ==and=== ? -->
+  <!-- abstract equality -->
+ let color =5 == 5
+console.log(color);
+
+<!-- strict equality-->
+var num =5 === 15
+console.log(num);
+
+---------------------------------------------------------------------------------------------------------------------------
+
+<!-- task8 -->
+  <!-- explain difference between forEach, map, filter and reduce methods: -->
+   <!-- map -->
+  let veggies = ["brinjal", "potato", "tomato", "ladyfingers", "carrot"];
+    veggies.map((item) => console.log(item.toUpperCase()));
+
+   <!-- filter --> it is used when wec want to filter or find out some element in  an array
+   let numbers = [1, 3, 5, 6, 88, 32, 53];
+  let even = numbers.filter((item) => item % 2 === 0);
+   console.log(even);
+   <!-- forEach --> it wii apply to each and every letter  or element in array.
+  
+   let fruits = ["APPle", "Mango", "BAnana", "Grapes"];
+ fruits.forEach((x) => console.log(x.toLowerCase()));
+
+ <!-- Reduce -->
+  it will arrrange the numbers in chronological order
+ let numbers = [1, 3, 5, 6, 88, 32, 53];
+ let sum = numbers.reduce(
+  (previousValue, currentValue) => previousValue + currentValue,
+  0 );
+  console.log(sum);
+
+  -------------------------------------------------------------------------------------------------------------------------
+<!-- task9 -->
+ Explain about call, apply and bind
+let persondetails  = {
+  name: "kaveri",
+  age: 25,
+  isStudent: true,
+  city: "Hyderabad",
+};
+function DisplayDetail(company, designation) {
+  console.log("Hello inside constructor function", this);
+  console.log(this.name + " is of age " + this.age, company, designation);
+}
+<!-- call: allows you to pass the argument individually -->
+DisplayDetail.call(persondetails, "Microsoft", "FrontEnd");
+<!-- apply allows you to pass the argument in array braces -->
+DisplayDetail.apply(persondetails, ["TCS", "BackEnd"]);
+
+<!-- bind: allows you to  give a new object -->
+const displayBind = DisplayDetail.bind(persondetails);
+  displayBind("wipro", " Full Stack");
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+

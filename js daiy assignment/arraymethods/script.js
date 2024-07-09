@@ -59,5 +59,9 @@
 
 // console.log(sum);
 
+// //8. filter
+// let numbers = [1, 3, 5, 6, 88, 32, 53];
+// let even = numbers.filter((item) => item % 2 === 0);
+// console.log(even);
 
 
