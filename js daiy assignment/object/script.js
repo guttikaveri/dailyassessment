@@ -54,7 +54,7 @@ car.serviceHistory =[
 ]
 console.log(car)
 
-// task-7: using for in loop
+// task-7: using for in loop:
 for (let key in car) {
     console.log(key,car[key])
 }
